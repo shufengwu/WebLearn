@@ -1,0 +1,143 @@
+@charset "UTF-8";
+.top {
+    background-color: #333333;
+    height: 40px;
+    min-width: 1226px;
+}
+
+.top_page {
+    width: 1226px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+}
+
+.top_page_l ul li a {
+    color: #B0B0B0;
+    font: 12px "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.top_page_l ul li a:hover {
+    color: #ffffff;
+}
+
+.top_page_l ul li span {
+    color: #424242;
+    font: 12px sans-serif;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.top_page_l ul li {
+    float: left;
+    line-height: 40px;
+}
+
+.top_page_r ul li a {
+    color: #B0B0B0;
+    font: 12px "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.top_page_r ul li a:hover {
+    color: #FFFFFF;
+}
+
+.top_page_r ul li {
+    float: left;
+    line-height: 40px;
+}
+
+.top_page_r ul li span {
+    color: #424242;
+    font: 12px sans-serif;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.buy_car {
+    width: 120px;
+    line-height: 40px;
+    text-align: center;
+    margin-left: 0.5em;
+}
+
+.buy_car a {
+    color: #B0B0B0;
+    font: 12px "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.buy_car a s {
+    height: 16px;
+    width: 16px;
+    background: url(../image/buy_car_null.png);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5mm
+}
+
+.main_page_menu_h {
+    width: 1226px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.main_page_menu_h_left {
+    width: 850px;
+    height: 100px;
+    float: left;
+}
+
+.mi_logo a {
+    height: 55px;
+    width: 55px;
+    background-color: #FF6700;
+    margin: 22px 0 0 0;
+    text-align: center;
+}
+
+.mi_logo a s {
+    height: 30px;
+    width: 30px;
+    background: url(../image/xiaomi_logo_30.png);
+    display: inline-block;
+    margin-top: 13px;
+}
+
+.activity_logo {
+    margin-left: 14px;
+    width: 165px;
+    height: 100px;
+    background-color: #FFFFFF;
+}
+
+.activity_logo a {
+    height: 100px;
+    width: 165px;
+    text-align: center;
+}
+
+.activity_logo a s {
+    height: 63px;
+    width: 163px;
+    background: url(../image/activity_logo.gif);
+    display: inline-block;
+    margin-top: 18px;
+    margin-left: 1px;
+}
+
+.menu_h ul li{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 100px;
+}
+
+.menu_h ul li a{ 
+    color: #333333;
+    font: 16px "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.menu_h ul li a:hover{ 
+    color: #FF6700;
+}
