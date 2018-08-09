@@ -10,10 +10,12 @@
     height: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin: 0 auto;
 }
 
+
+
 .top_page_l ul li a {
+    vertical-align: middle;
     color: #B0B0B0;
     font: 12px "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
@@ -23,6 +25,7 @@
 }
 
 .top_page_l ul li span {
+    vertical-align: middle;
     color: #424242;
     font: 12px sans-serif;
     margin-right: 0.5em;
@@ -35,6 +38,7 @@
 }
 
 .top_page_r ul li a {
+    vertical-align: middle;
     color: #B0B0B0;
     font: 12px "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
@@ -49,6 +53,7 @@
 }
 
 .top_page_r ul li span {
+    vertical-align: middle;
     color: #424242;
     font: 12px sans-serif;
     margin-right: 0.5em;
@@ -63,6 +68,7 @@
 }
 
 .buy_car a {
+    vertical-align: middle;
     color: #B0B0B0;
     font: 12px "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
@@ -122,7 +128,7 @@
     width: 163px;
     background: url(../image/activity_logo.gif);
     display: inline-block;
-    margin-top: 18px;
+    margin-top: 19px;
     margin-left: 1px;
 }
 
@@ -134,6 +140,7 @@
 }
 
 .menu_h ul li a{ 
+    vertical-align: middle;
     color: #333333;
     font: 16px "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
@@ -148,31 +155,145 @@
 
 .search{
     height: 50px;
-    margin-top: 25px;
 }
 
 .search form{
     height: 50px;
+    margin-top: 25px;
     float: right;
-}
-
-.search form input{
-    height: 50px;
-    
+    background: #FFFFFF;
 }
 
 .search_textview{
-    width: 246px;
+    width: 244px;
     height: 48px;
     border: 1px solid #E0E0E0;
-    
+    padding: 0 10px;
+    color: #333333;
+    outline: none;
+    font: 16px "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    vertical-align: middle;
 }
+
 
 .search_submit_button{
     width: 50px;
     height: 50px;
     border: 1px solid #E0E0E0;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
+    background-image: url(../image/search_grey.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}
+
+.search_hover:hover{
+    border: 1px solid #B0B0B0;
+}
+.search_hover:focus{
+    border: 1px solid #FF6700;
+}
+
+.search_button_hover:hover{
+    border: 1px solid #FF6700;
+    background-color: #FF6700;
+    background-image: url(../image/search_white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main_page_menu_v {
+    position: relative;
+    width: 1226px;
+    height: 460px;
+    margin: 0 auto;
+}
+
+.main_page_menu_v_left{
+    position: absolute;
+    width: 234px;
+    height: 460px;
+    background-color: #424242;
+}
+
+.main_page_menu_v_left ul{
+    width: 234px;
+    height: 420px;
+    margin: 20px 0 0 0;
+}
+
+.main_page_menu_v_left ul li{
+    width: 234px;
+    height: 42px;
+
+    vertical-align: middle;
+}
+
+.main_page_menu_v_left ul li a{
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    height: 42px;
+    color: #FFFFFF;
+    font: 14px "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    line-height: 42px;
+    
+}
+
+.main_page_menu_v_left ul li a:hover{
+    
+    background-color: #FF6700;
+    
+}
+
+.main_page_menu_v_left ul li s{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background: url(../image/right_arrow.png);
+    vertical-align: middle;
+    top: 14px;
+    right: 27px;
+}
+
+.main_page_banner{
+    position: absolute;
+    width: 1226px;
+    height: 460px;
+    background: #FF6700;
+}
+
+.main_page_banner img{
+    width: 1226px;
+    height: 460px;
+}
+
+
+#img_yuan{
+    position: absolute;
+    display: block;
+    left: auto;
+    right: 30px;
+    bottom: 20px;
+    width: 400px;
+    text-align: right;
+    height: 17.6px;
+}
+/*
+ *每一个小圆点
+ * */
+#img_yuan font{
+    border:2px solid #424242;
+    width:6px; 
+    height:6px;
+    border-radius:50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 4px;
+    display: block;
+    float: right;
+    background-color: white;
 }
  
 
