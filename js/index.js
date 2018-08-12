@@ -99,6 +99,7 @@ window.onload = function () {
                 s[j].style.backgroundImage = 'url(./image/buy_car_not_null.png)';
             }
         }
+        document.getElementById("buy_car_dropdown").style.display = "block";
     }
 
     document.getElementById('buy_car').onmouseout = function(){
@@ -111,6 +112,7 @@ window.onload = function () {
                 s[j].style.backgroundImage = 'url(./image/buy_car_null.png)';
             }
         }
+        document.getElementById("buy_car_dropdown").style.display = "none";
     }
 }
 
