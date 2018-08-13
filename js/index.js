@@ -4,10 +4,13 @@ var is_click = false;
 
 window.onload = function () {
 
-    // window.document.body.onmouseover = function (event) {
-    //     console.log('当前鼠标在', event.target.id, '元素上'); //在控制台中打印该变量
-    //     mouse_move_id = event.target.id;
-    // }
+    changeRightBarStatus();
+    if (getClientHeight() > window.scrollY) {
+        document.getElementById('home_right_bottom_bar').style.display = "none";
+
+    } else {
+        document.getElementById('home_right_bottom_bar').style.display = "block";
+    }
 
     var list_font = document.getElementById('img_yuan').getElementsByTagName('font');
     list_font[0].style.backgroundColor = 'white';
@@ -72,9 +75,9 @@ window.onload = function () {
         var temp;
         if (index === 0) {
             temp = 3;
-        } else if(index === 1){
+        } else if (index === 1) {
             temp = 4;
-        }else {
+        } else {
             temp = index - 2;
         }
         index = temp;
@@ -89,31 +92,56 @@ window.onload = function () {
         autoPlay();
     }
 
-    document.getElementById('buy_car').onmouseover = function(){
-        var buy_car = document.getElementById('buy_car');
-        var a = buy_car.getElementsByTagName('a');
-        for (i = 0; i < a.length; i++) {
-            a[i].style.color = '#FF6700';
-            var s = a[i].getElementsByTagName('s');
-            for (j = 0; j < s.length; j++) {
-                s[j].style.backgroundImage = 'url(./image/buy_car_not_null.png)';
-            }
-        }
-        document.getElementById("buy_car_dropdown").style.display = "block";
+    document.getElementById('a_person_center').onmouseover = function () {
+        document.getElementById('img_person_center').src = "./image/home_right_bar/person_center_hover.png";
     }
 
-    document.getElementById('buy_car').onmouseout = function(){
-        var buy_car = document.getElementById('buy_car');
-        var a = buy_car.getElementsByTagName('a');
-        for (i = 0; i < a.length; i++) {
-            a[i].style.color = '#B0B0B0';
-            var s = a[i].getElementsByTagName('s');
-            for (j = 0; j < s.length; j++) {
-                s[j].style.backgroundImage = 'url(./image/buy_car_null.png)';
-            }
-        }
-        document.getElementById("buy_car_dropdown").style.display = "none";
+    document.getElementById('a_person_center').onmouseout = function () {
+        document.getElementById('img_person_center').src = "./image/home_right_bar/person_center_normal.png";
     }
+
+    document.getElementById('a_customer').onmouseover = function () {
+        document.getElementById('img_customer').src = "./image/home_right_bar/customer_hover.png";
+    }
+
+    document.getElementById('a_customer').onmouseout = function () {
+        document.getElementById('img_customer').src = "./image/home_right_bar/customer_normal.png";
+    }
+
+    document.getElementById('a_buy_cart').onmouseover = function () {
+        document.getElementById('img_buy_cart').src = "./image/home_right_bar/buy_cart_hover.png";
+    }
+
+    document.getElementById('a_buy_cart').onmouseout = function () {
+        document.getElementById('img_buy_cart').src = "./image/home_right_bar/buy_cart_normal.png";
+    }
+
+    document.getElementById('a_go_top').onmouseover = function () {
+        document.getElementById('img_go_top').src = "./image/home_right_bar/totop_hover.png";
+    }
+
+    document.getElementById('a_go_top').onmouseout = function () {
+        document.getElementById('img_go_top').src = "./image/home_right_bar/totop.png";
+    }
+
+    document.getElementById('a_go_top').onclick = function () {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    }
+
+    window.onresize = function () {
+        changeRightBarStatus();
+    };
+
+    window.onscroll = function () {
+        console.log(getClientHeight()+" "+window.scrollY);
+        if (getClientHeight() > window.scrollY) {
+            document.getElementById('home_right_bottom_bar').style.display = "none";
+
+        } else {
+            document.getElementById('home_right_bottom_bar').style.display = "block";
+        }
+    };
 }
 
 //一轮过后，还是第二轮
@@ -138,3 +166,35 @@ function changeImg(index2) {
     list1[index2].style.border = '2px solid #757575';
 
 }
+
+function changeRightBarStatus() {
+    var w = document.documentElement.clientWidth || document.body.clientWidth;
+    if (w < 1394) {
+        document.getElementById('home_right_bar').style.display = "none";
+    } else {
+        document.getElementById('home_right_bar').style.display = "block";
+    }
+
+    //有问题
+    // if (getClientHeight() <= 490) {
+    //     document.getElementById('home_right_bar').setAttribute("style", "display: block;position: fixed;top: 40px;right: 0;z-index: 999999;width: 84px;height: 380px;");
+    // } else {
+    //     document.getElementById('home_right_bar').setAttribute("style", "display: block;position: fixed;bottom: 70px;right: 0;z-index: 999999;width: 84px;height: 380px;");
+    // }
+}
+
+function getClientHeight() {
+    var h = document.documentElement.clientHeight || document.body.clientHeight;
+    return h;
+}
+
+function getScrollTop() {
+    var scrollTop = 0;
+    if (document.documentElement && document.documentElement.scrollTop) {
+        scrollTop = document.documentElement.scrollTop;
+    } else if (document.body) {
+        scrollTop = document.body.scrollTop;
+    }
+    return scrollTop;
+}
+
