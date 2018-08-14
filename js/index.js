@@ -142,6 +142,13 @@ window.onload = function () {
             document.getElementById('home_right_bottom_bar').style.display = "block";
         }
     };
+
+    document.getElementById('a_go_top').onclick = function () {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    }
+
+    
 }
 
 //一轮过后，还是第二轮
@@ -170,17 +177,18 @@ function changeImg(index2) {
 function changeRightBarStatus() {
     var w = document.documentElement.clientWidth || document.body.clientWidth;
     if (w < 1394) {
-        document.getElementById('home_right_bar').style.display = "none";
+        if (getClientHeight() <= 490) {
+            document.getElementById('home_right_bar').setAttribute("style", "display: none;position: fixed;top: 40px;right: 0;z-index: 999999;width: 84px;height: 380px;");
+        } else {
+            document.getElementById('home_right_bar').setAttribute("style", "display: none;position: fixed;bottom: 70px;right: 0;z-index: 999999;width: 84px;height: 380px;");
+        }
     } else {
-        document.getElementById('home_right_bar').style.display = "block";
+        if (getClientHeight() <= 490) {
+            document.getElementById('home_right_bar').setAttribute("style", "display: block;position: fixed;top: 40px;right: 0;z-index: 999999;width: 84px;height: 380px;");
+        } else {
+            document.getElementById('home_right_bar').setAttribute("style", "display: block;position: fixed;bottom: 70px;right: 0;z-index: 999999;width: 84px;height: 380px;");
+        }
     }
-
-    //有问题
-    // if (getClientHeight() <= 490) {
-    //     document.getElementById('home_right_bar').setAttribute("style", "display: block;position: fixed;top: 40px;right: 0;z-index: 999999;width: 84px;height: 380px;");
-    // } else {
-    //     document.getElementById('home_right_bar').setAttribute("style", "display: block;position: fixed;bottom: 70px;right: 0;z-index: 999999;width: 84px;height: 380px;");
-    // }
 }
 
 function getClientHeight() {

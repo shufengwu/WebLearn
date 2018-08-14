@@ -251,7 +251,7 @@
     width: 1226px;
     height: 460px;
     margin: 0 auto;
-    background-color: #FF6700;
+    /* background-color: #FF6700; */
 }
 
 .main_page_menu_v_left {
@@ -262,19 +262,20 @@
     background-color: #424242;
 }
 
-.main_page_menu_v_left ul {
+.main_page_menu_v_left>ul {
     width: 234px;
     height: 420px;
     margin: 20px 0 0 0;
 }
 
-.main_page_menu_v_left ul li {
+.main_page_menu_v_left>ul>li {
+    position: relative;
     width: 234px;
     height: 42px;
     vertical-align: middle;
 }
 
-.main_page_menu_v_left ul li a {
+.main_page_menu_v_left>ul>li>a {
     position: relative;
     display: block;
     padding-left: 30px;
@@ -284,11 +285,11 @@
     line-height: 42px;
 }
 
-.main_page_menu_v_left ul li a:hover {
+.main_page_menu_v_left>ul>li>a:hover {
     background-color: #FF6700;
 }
 
-.main_page_menu_v_left ul li s {
+.main_page_menu_v_left>ul>li>a>s {
     position: absolute;
     width: 14px;
     height: 14px;
@@ -303,7 +304,6 @@
     position: absolute;
     width: 1226px;
     height: 460px;
-    /* background: #FF6700; */
 }
 
 @keyframes img_opacity {
@@ -391,7 +391,7 @@
 
 #other_content {
     width: 1226px;
-    height: 800px;
+    height: 1500px;
     background: #757575;
     margin-left: auto;
     margin-right: auto;
@@ -486,5 +486,66 @@
 }
 
 #a_go_top:hover div p {
+    color: #FF6700;
+}
+
+#menu_v_left_menu {
+    position: absolute;
+    top: -20px;
+    left: 234px;
+    z-index: 998;
+    display: none;
+    height: 460px;
+    width: 992px;
+    background-color: #FFFFFF;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+}
+
+#menu_v_left_phone_card:hover>div {
+    display: block;
+}
+
+#menu_v_left_phone_card>div {
+    height: 460px;
+    width: 992px;
+}
+
+#menu_v_left_phone_card>div>ul {
+    height: 460px;
+    width: 248px;
+    float: left;
+}
+
+#menu_v_left_phone_card>div>ul>li {
+    width: 248px;
+    height: 76px;
+    background-color: #FFFFFF;
+}
+
+#menu_v_left_phone_card>div>ul>li>a{
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+}
+
+#menu_v_left_phone_card>div>ul>li>a>img {
+    height: 40px;
+    width: 40px;
+    float: left;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+#menu_v_left_phone_card>div>ul>li>a>p {
+    height: 76px;
+    float: left;
+    color: #333333;
+    font-size: 14px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+#menu_v_left_phone_card>div>ul>li>a:hover>p{
     color: #FF6700;
 }
