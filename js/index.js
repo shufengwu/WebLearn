@@ -148,6 +148,54 @@ window.onload = function () {
         document.body.scrollTop = 0;
     }
 
+    document.getElementById('menu_3_left_li_1').onmouseover = function () {
+        document.getElementById('menu_3_left_li_1').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/cellphone_hover.png";
+    }
+
+    document.getElementById('menu_3_left_li_1').onmouseout = function () {
+        document.getElementById('menu_3_left_li_1').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/cellphone.png";
+    }
+
+    document.getElementById('menu_3_left_li_2').onmouseover = function () {
+        document.getElementById('menu_3_left_li_2').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/gift_hover.png";
+    }
+
+    document.getElementById('menu_3_left_li_2').onmouseout = function () {
+        document.getElementById('menu_3_left_li_2').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/gift.png";
+    }
+
+    document.getElementById('menu_3_left_li_3').onmouseover = function () {
+        document.getElementById('menu_3_left_li_3').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/F_hover.png";
+    }
+
+    document.getElementById('menu_3_left_li_3').onmouseout = function () {
+        document.getElementById('menu_3_left_li_3').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/F.png";
+    }
+
+    document.getElementById('menu_3_left_li_4').onmouseover = function () {
+        document.getElementById('menu_3_left_li_4').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/sim_hover.png";
+    }
+
+    document.getElementById('menu_3_left_li_4').onmouseout = function () {
+        document.getElementById('menu_3_left_li_4').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/sim.png";
+    }
+
+    document.getElementById('menu_3_left_li_5').onmouseover = function () {
+        document.getElementById('menu_3_left_li_5').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/recycle_hover.png";
+    }
+
+    document.getElementById('menu_3_left_li_5').onmouseout = function () {
+        document.getElementById('menu_3_left_li_5').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/recycle.png";
+    }
+
+    document.getElementById('menu_3_left_li_6').onmouseover = function () {
+        document.getElementById('menu_3_left_li_6').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/charge_hover.png";
+    }
+
+    document.getElementById('menu_3_left_li_6').onmouseout = function () {
+        document.getElementById('menu_3_left_li_6').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/charge.png";
+    }
+
     
 }
 
