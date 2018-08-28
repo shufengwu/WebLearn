@@ -14,15 +14,24 @@ window.onload = function () {
         if (city.value === "") {
             alert('城市名不能为空');
         } else {
-            url = 'https://www.sojson.com/open/api/weather/json.shtml?city=' + city.value;
+            //GET
+            //url = 'https://free-api.heweather.com/s6/weather/forecast?key=00bdd8bea75d4644ad602a9345442853&location=' + city.value;
+            //POST
+            url = 'https://free-api.heweather.com/s6/weather/forecast';
             xmlHttpRequest.onreadystatechange = function () {
                 if (xmlHttpRequest.readyState == 4 && xmlHttpRequest.status == 200) {
-                    var xmlDoc = xmlhttp.responseXML;
-                    console.log(xmlDoc);
+                    var jsonStr = xmlHttpRequest.responseText;
+                    console.log(jsonStr);
                 }
             }
-            xmlHttpRequest.open("GET", url, true);
-            xmlHttpRequest.send();
+            //GET请求
+            // xmlHttpRequest.open("GET", url, true);
+            // xmlHttpRequest.send();
+
+            //POST请求
+            xmlHttpRequest.open("POST", url, true);
+            xmlHttpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlHttpRequest.send("key=00bdd8bea75d4644ad602a9345442853&location=" + city.value);
         }
 
     }
