@@ -76,6 +76,7 @@ window.onload = function () {
         //后退按钮
         $("#banner_left_arrow").click(function (e) {
             e.preventDefault();
+            e.stopPropagation();
             console.log('后退');
             var temp;
             if (index === 0) {
@@ -93,18 +94,19 @@ window.onload = function () {
         //前进按钮
         $("#banner_right_arrow").click(function (e) {
             e.preventDefault();
+            e.stopPropagation();
             console.log('前进');
             clearInterval(start);
             start = setInterval(autoPlay, 4000);
             autoPlay();
         });
 
-        $("#a_person_center").mouseover(function () {
-            $("#img_person_center").attr('src', "./image/home_right_bar/person_center_hover.png");
+        jQuery("#a_person_center").mouseover(function () {
+            jQuery("#img_person_center").attr('src', "./image/home_right_bar/person_center_hover.png");
         });
 
-        $("#a_person_center").mouseout(function () {
-            $("#img_person_center").attr('src', "./image/home_right_bar/person_center_normal.png");
+        jQuery("#a_person_center").mouseout(function () {
+            jQuery("#img_person_center").attr('src', "./image/home_right_bar/person_center_normal.png");
         });
 
         $("#a_customer").mouseover(function () {
@@ -133,6 +135,7 @@ window.onload = function () {
 
         $("#a_go_top").click(function (e) {
             e.preventDefault();
+            e.stopPropagation();
             document.documentElement.scrollTop = 0;
             document.body.scrollTop = 0;
         });
@@ -152,53 +155,54 @@ window.onload = function () {
         });
 
         
-        document.getElementById('menu_3_left_li_1').onmouseover = function () {
-            document.getElementById('menu_3_left_li_1').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/cellphone_hover.png";
-        }
 
-        document.getElementById('menu_3_left_li_1').onmouseout = function () {
-            document.getElementById('menu_3_left_li_1').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/cellphone.png";
-        }
+        $("#menu_3_left_li_1").mouseover(function () { 
+            $("#menu_3_left_li_1 a img").attr("src","./image/menu_3_left_icon/cellphone_hover.png");
+        });
 
-        document.getElementById('menu_3_left_li_2').onmouseover = function () {
-            document.getElementById('menu_3_left_li_2').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/gift_hover.png";
-        }
+        $("#menu_3_left_li_1").mouseout(function () { 
+            $("#menu_3_left_li_1 a img").attr("src","./image/menu_3_left_icon/cellphone.png");
+        });
 
-        document.getElementById('menu_3_left_li_2').onmouseout = function () {
-            document.getElementById('menu_3_left_li_2').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/gift.png";
-        }
+        $("#menu_3_left_li_2").mouseover(function () { 
+            $("#menu_3_left_li_2 a img").attr("src","./image/menu_3_left_icon/gift_hover.png");
+        });
 
-        document.getElementById('menu_3_left_li_3').onmouseover = function () {
-            document.getElementById('menu_3_left_li_3').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/F_hover.png";
-        }
+        $("#menu_3_left_li_2").mouseout(function () { 
+            $("#menu_3_left_li_2 a img").attr("src","./image/menu_3_left_icon/gift.png");
+        });
 
-        document.getElementById('menu_3_left_li_3').onmouseout = function () {
-            document.getElementById('menu_3_left_li_3').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/F.png";
-        }
+        $("#menu_3_left_li_3").mouseover(function () { 
+            $("#menu_3_left_li_3 a img").attr("src","./image/menu_3_left_icon/F_hover.png");
+        });
 
-        document.getElementById('menu_3_left_li_4').onmouseover = function () {
-            document.getElementById('menu_3_left_li_4').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/sim_hover.png";
-        }
+        $("#menu_3_left_li_3").mouseout(function () { 
+            $("#menu_3_left_li_3 a img").attr("src","./image/menu_3_left_icon/F.png");
+        });
 
-        document.getElementById('menu_3_left_li_4').onmouseout = function () {
-            document.getElementById('menu_3_left_li_4').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/sim.png";
-        }
+        $("#menu_3_left_li_4").mouseover(function () { 
+            $("#menu_3_left_li_4 a img").attr("src","./image/menu_3_left_icon/sim_hover.png");
+        });
 
-        document.getElementById('menu_3_left_li_5').onmouseover = function () {
-            document.getElementById('menu_3_left_li_5').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/recycle_hover.png";
-        }
+        $("#menu_3_left_li_4").mouseout(function () { 
+            $("#menu_3_left_li_4 a img").attr("src","./image/menu_3_left_icon/sim.png");
+        });
 
-        document.getElementById('menu_3_left_li_5').onmouseout = function () {
-            document.getElementById('menu_3_left_li_5').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/recycle.png";
-        }
+        $("#menu_3_left_li_5").mouseover(function () { 
+            $("#menu_3_left_li_5 a img").attr("src","./image/menu_3_left_icon/recycle_hover.png");
+        });
 
-        document.getElementById('menu_3_left_li_6').onmouseover = function () {
-            document.getElementById('menu_3_left_li_6').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/charge_hover.png";
-        }
+        $("#menu_3_left_li_5").mouseout(function () { 
+            $("#menu_3_left_li_5 a img").attr("src","./image/menu_3_left_icon/recycle.png");
+        });
 
-        document.getElementById('menu_3_left_li_6').onmouseout = function () {
-            document.getElementById('menu_3_left_li_6').firstElementChild.firstElementChild.src = "./image/menu_3_left_icon/charge.png";
-        }
+        $("#menu_3_left_li_6").mouseover(function () { 
+            $("#menu_3_left_li_6 a img").attr("src","./image/menu_3_left_icon/charge_hover.png");
+        });
+
+        $("#menu_3_left_li_6").mouseout(function () { 
+            $("#menu_3_left_li_6 a img").attr("src","./image/menu_3_left_icon/charge.png");
+        });
     });
 
 
